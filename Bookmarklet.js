@@ -1,5 +1,5 @@
 /*
-Copy the line below (line 7), click the star at the end of your search bar, click "Add bookmark", click "More", name it "GeoFS debug reload",
+Copy the line below (line 7), click the star at the end of your search bar, click "Add bookmark", click "More", name it "GeoFS carrier catapults",
 paste the code into the URL space, put in a GeoFS bookmarklets folder if you have one, and click "Save". 
 To run it, click on the bookmarklet while playing GeoFS. 
 If the bookmarks bar is not visible while playing GeoFS, right click any bookmark and click "Show bookmarks bar" at the very bottom of the dropdown menu.
