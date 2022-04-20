@@ -1,10 +1,9 @@
 let catLlas = [[37.778307623586805, -122.6090264835742, 22.753097613256113]]; //Modify to add new LLA locations for catapults.
 let carrierPlaneIds = ["7" ,"2581", "3460"]; //Will update as more planes are released
-let barDown = false;
+let barDown = true;
 let barLocked = false;
-let barKey = "q"; // change hotkeys by changing these variables
-let launchKey = "l" // |
-let lockKey = "/"; // |
+let launchKey = """ // |
+let lockKey = "q"; // |
 
 function gearBarPosLock() {
  if (barLocked) {
@@ -28,18 +27,6 @@ return Math.sqrt(a * a + b * b + c * c);
 }
 if (carrierPlaneIds.includes(geofs.aircraft.instance.id)) {
 document.addEventListener("keypress", function onEvent(event) {
-    if (event.key === barKey) {
-      if (barDown) {
-        barDown = false;
-        ui.notification.show("Launch Bar Stowed")
-      }
-      else {
-          if (geofs.animation.values.groundContact == 1) { 
-           barDown = true 
-           ui.notification.show("Launch Bar Deployed")
-        }
-      }
-    }
 
     if (event.key === lockKey) {
         if (barLocked) {
@@ -66,7 +53,6 @@ document.addEventListener("keypress", function onEvent(event) {
                   barDown = false;
              geofs.aircraft.instance.rigidBody.reset();
           var launchForce = geofs.aircraft.instance.rigidBody.mass * 10
-          ui.notification.show("Away we go!")
           let whiteSmokeEmitter = new geofs.fx.ParticleEmitter({
             anchor: {
                         worldPosition: [0, 0, -1]
