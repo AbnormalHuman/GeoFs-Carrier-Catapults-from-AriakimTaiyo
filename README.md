@@ -2,6 +2,8 @@
 
 **Please note this is forked from AriakimTaiyo's original project. Apparently he re-wrote about 85% of the code upon seeing my version, which is currently archived.**
 
+The main code is meant to be injected into the console. The bookmarklet code has its own set of instructions.
+
 Adds functional and tweakable catapults to the carrier in GeoFs
 
 Controls:<br>
