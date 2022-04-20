@@ -2,7 +2,7 @@ let catLlas = [[37.778307623586805, -122.6090264835742, 22.753097613256113]]; //
 let carrierPlaneIds = ["7" ,"2581", "3460"]; //Will update as more planes are released
 let barDown = true;
 let barLocked = false;
-let launchKey = """ // |
+let launchKey = "'" // |
 let lockKey = "q"; // |
 
 function gearBarPosLock() {
