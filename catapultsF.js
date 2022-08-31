@@ -1,7 +1,5 @@
 function runCatapults() {
-ui.notification.show("Use q to lock the launch bar.")
 let catLlas = [[37.778307623586805, -122.6090264835742, 22.753097613256113]]; //Modify to add new LLA locations for catapults.
-let carrierPlaneIds = ["7" ,"2581", "3460"]; //Will update as more planes are released
 let barDown = true;
 let barLocked = false;
 let launchKey = "`" // |
@@ -27,20 +25,20 @@ var c = pos2[2] - pos1[2];
 return Math.sqrt(a * a + b * b + c * c);
   
 }
-if (carrierPlaneIds.includes(geofs.aircraft.instance.id)) {
+if (geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 3460) {
 document.addEventListener("keypress", function onEvent(event) {
 
     if (event.key === lockKey) {
         if (barLocked) {
         barLocked = false;
         clearInterval(lockInt)
-        ui.notification.show("Launch Bar Unlocked")
+        ui.notification.show("Launch bar unlocked")
       }
       else {
         catLlas.forEach(function(e){
           if (distance(geofs.aircraft.instance.llaLocation, e) < 10) {
             barLocked = true;
-            ui.notification.show("Launch bar locked, apply max power and press ~ to launch.")
+            ui.notification.show("Launch bar locked")
             lockInt = setInterval(function(){
             gearBarPosLock()
               })
