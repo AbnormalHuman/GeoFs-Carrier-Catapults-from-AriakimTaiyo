@@ -43,7 +43,6 @@ document.addEventListener("keypress", function onEvent(event) {
         catLlas.forEach(function(e){
           if (distance(geofs.aircraft.instance.llaLocation, e) < 10) {
             barLocked = true;
-            ui.notification.show("Launch bar locked")
             lockInt = setInterval(function(){
             gearBarPosLock()
               })
