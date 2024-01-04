@@ -25,7 +25,12 @@ var c = pos2[2] - pos1[2];
 return Math.sqrt(a * a + b * b + c * c);
   
 }
-if (geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 3460) {
+
+var carrierPlaneCheck = 0;
+
+setInterval(function(){
+if ((geofs.aircraft.instance.id == 7 || geofs.aircraft.instance.id == 2581 || geofs.aircraft.instance.id == 3460) && carrierPlaneCheck == 0) {
+ carrierPlaneCheck = 1;
 document.addEventListener("keypress", function onEvent(event) {
 
     if (event.key === lockKey) {
@@ -82,5 +87,8 @@ document.addEventListener("keypress", function onEvent(event) {
           }
         }
       })
-    };
+    } else {
+carrierPlaneCheck = 0
+    }
+  }, 100)
 }
