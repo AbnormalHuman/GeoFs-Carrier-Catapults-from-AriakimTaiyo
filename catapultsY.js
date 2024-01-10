@@ -37,7 +37,7 @@ document.addEventListener("keypress", function onEvent(event) {
         if (barLocked) {
         barLocked = false;
         clearInterval(lockInt)
-        ui.notification.show("Launch bar locked")
+        ui.notification.show("Catapult launch bar locked, press [~] to launch.")
       }
       else {
         catLlas.forEach(function(e){
