@@ -37,7 +37,7 @@ document.addEventListener("keypress", function onEvent(event) {
         if (barLocked) {
         barLocked = false;
         clearInterval(lockInt)
-        ui.notification.show("Launch bar unlocked")
+        ui.notification.show("Launch bar locked")
       }
       else {
         catLlas.forEach(function(e){
